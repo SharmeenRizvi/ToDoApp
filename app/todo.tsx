@@ -7,7 +7,7 @@ import {MdCheckCircle} from "react-icons/md";
 export default function Todo() {
   const[tasks, setTasks] = useState([ "Prepare for TypeScript test", "Learn Chakra UI", "Practise Tailwind"]);
   const[Item, setItem] = useState("");
-  function removeItem(taskName){
+  function removeItem(taskName: any){
     setTasks(
       tasks.filter((task) => {
         return task != taskName;
@@ -29,7 +29,7 @@ export default function Todo() {
     <Flex  justifyContent={"center"} alignItems="center" flexDirection={"column"}>
       <Heading mb={"15px"} mt={"8px"} color={"black"} fontFamily="serif"> To Do List</Heading>
       <UnorderedList listStyleType={"none"}>
-        {tasks.map((task) => {
+        {tasks.map((task: any) => {
           return(
           <ListItem key={task.index} m={"10px"}>
              <ListIcon as={MdCheckCircle} color='purple.700' />
